@@ -1,0 +1,15 @@
+app:
+  name: Auto_Data_Pipline
+  version: pre_alpha
+
+setup:
+  is_setup: True
+
+dataset:
+  link: no
+  host: no
+
+initial_settings:
+  api_llm: no
+  api_key: no
+  tolerance_minimal_correlation: no
