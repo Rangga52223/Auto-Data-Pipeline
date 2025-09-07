@@ -1,12 +1,18 @@
 import pandas as pd
 import numpy as np
-from core.utils.checking_nulss_nan import checking_n_20
+from core.EDA_Handler.null_handler import cek_null
 
-def EDA_csv(folder_data):
-    df = pd.read_csv(folder_data)
-    hasil_eda_pertama = f'''
-Hasil shaping data: {df.shape}
-Isi Colomn dari file yang di kasih: {df.columns}'''
-    print(hasil_eda_pertama)
-    checking_n_20(df)
-    
+def main_eda(df):
+    auto_data_explore(df)
+
+def auto_data_explore(df):
+    print("\n===== 🔎 5 Data Teratas =====")
+    print(df.head())
+
+    print("\n===== 📊 Info Data =====")
+    df.info()
+
+    print("\n===== 🚩 Cek Null =====")
+    cek_null(df)  # jangan ditimpa dengan df, biar jelas fungsinya hanya ngecek
+
+        
